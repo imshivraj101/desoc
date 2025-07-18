@@ -8,8 +8,8 @@ const Navbar = () => {
 
       <div className="NavContainer">
 
-        <div className="NavLogo">
-          <img src={desoc} alt="Logo" />  
+        <div className="NavLogo flex items-center fit m-auto ">
+          <img src={desoc} alt="Logo" className='' />  
           </div>
 
         <div className="NavList">
