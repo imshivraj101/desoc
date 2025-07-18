@@ -1,0 +1,129 @@
+/* Remove full viewport height from HeroWrapper */
+.HeroWrapper {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Still keep background fixed */
+.HeroBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Hero Content scrolls as part of full page now */
+.HeroContentBox {
+  background-color: white;
+  color: black;
+  width: 90vw;
+  margin: 0 auto;
+  min-height: 100vh;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 100px;
+  margin-top: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Header text */
+.HeroText {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 20vh;
+  z-index: 0;
+}
+
+/* Logo layout */
+.HeroLogo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  gap: 100px;
+}
+
+.dsoc img {
+  width: 500px;
+  padding-top: 50px;
+}
+
+.titley img {
+  width: 500px;
+}
+
+/* About section */
+.about h3 {
+  padding-top: 50px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Upcoming event layout */
+.upcoming-event {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 100px;
+  gap: 50px;
+}
+
+.event-image img {
+  width: 600px;
+  border-radius: 10px;
+}
+
+.event-name h2 {
+  margin-top: 60px;
+  background-color: red;
+  color: white;
+  font-size: 2.2rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.event-name {
+  display: flex;
+  justify-content: center;
+}
+
+.event-details {
+  max-width: 600px;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.event-description {
+  font-size: 1.5rem;
+}
+
+.event-button {
+  margin-top: 180px;
+  padding: 12px 28px;
+  background-color: #000;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-button:hover {
+  background-color: #444;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}

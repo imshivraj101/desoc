@@ -1,0 +1,30 @@
+.committee h2 { background-color: red;
+  color: white;
+  font-size: 2.2rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: fit-content;
+  margin-top: 40px;
+
+ }
+
+ .committee {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .committee-gallery img{
+  width: 80%;
+
+
+ }
+
+ .committee-gallery{
+  display: flex;
+  flex-direction: column;
+    margin-top: 40px;
+
+  align-items: center;
+ }
