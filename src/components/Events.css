@@ -1,0 +1,46 @@
+.event-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.event-heading h2 {
+  background-color: red;
+  color: white;
+  font-size: 2.2rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: fit-content; /* only as wide as the content */
+}
+
+
+.eventlist {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+
+.image-placeholder, .event-card img {
+  width: 100%;
+  height: 150px;
+  background-color: #eee;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.event-card p {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+}

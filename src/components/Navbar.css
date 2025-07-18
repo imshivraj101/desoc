@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.NavContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0f172a; /* Navy-like background */
+  color: white;
+   z-index: 10; 
+   width: 100%;
+     position: fixed;
+}
+
+.NavLogo img {
+  height: 100px; 
+  margin: -69px 0 ;/* Adjust based on your logo size */
+
+  z-index: 10; 
+}
+
+.NavList ul {
+  display: flex;
+  gap: 6rem;
+  list-style: none;
+  font-size: 1.5rem;
+  padding-right: 20px;
+}
+.NavList a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.NavList a:hover {
+  color: #38bdf8; /* Tailwind sky-400 like hover */
+}
