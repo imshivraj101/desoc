@@ -11,16 +11,16 @@
   font-size: 2.2rem;
   padding: 10px 20px;
   border-radius: 8px;
-  width: fit-content; /* only as wide as the content */
+  width: fit-content;
 }
-
 
 .eventlist {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
-  margin-top: 30px;
+  gap: 80px;
+  margin-top: 60px;
+  flex-wrap: wrap;
 }
 
 .event-card {
@@ -28,14 +28,19 @@
   flex-direction: column;
   align-items: center;
   width: 150px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
 }
 
-.image-placeholder, .event-card img {
+.event-card img {
   width: 100%;
   height: 150px;
-  background-color: #eee;
   border-radius: 8px;
   object-fit: cover;
+  background: none;
+  box-shadow: none;
 }
 
 .event-card p {
@@ -43,4 +48,5 @@
   font-size: 16px;
   text-align: center;
   font-weight: 500;
+  color: #333;
 }

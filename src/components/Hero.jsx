@@ -4,7 +4,9 @@ import desocCover from '../assets/desoc_cover.png';
 import desoc from '../assets/desoc.png';
 import name from '../assets/name.png';
 import Genesis from '../assets/genesis.png';
+
 import Events from "./Events";
+import Committee from './Committee';
 
 const Hero = () => {
   return (
@@ -63,6 +65,7 @@ const Hero = () => {
         </div>
 
         <Events/>
+        <Committee/>
       </div>
       
     </div>
