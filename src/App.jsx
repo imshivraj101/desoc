@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Hero from './components/Hero'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
@@ -22,6 +23,25 @@ function App() {
         5th week dp */}
       <Footer/>
     </Router>
+=======
+import React from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Footer from './components/Footer'
+
+const App = () => {
+  return (
+    <div>
+
+
+
+      <Navbar/>
+      <Hero/>
+      <Footer/>
+
+
+    </div>
+>>>>>>> 00ffaf7f7e6fd6e1db14eab10b430e26a11e2658
   )
 }
 
