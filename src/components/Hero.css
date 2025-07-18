@@ -1,12 +1,11 @@
-/* Full page wrapper */
+/* Remove full viewport height from HeroWrapper */
 .HeroWrapper {
   position: relative;
   width: 100%;
-  height: 100vh;
   overflow-x: hidden;
 }
 
-/* Fixed background image */
+/* Still keep background fixed */
 .HeroBackground {
   position: fixed;
   top: 0;
@@ -19,13 +18,13 @@
   z-index: -1;
 }
 
-/* Scrollable white content on top */
+/* Hero Content scrolls as part of full page now */
 .HeroContentBox {
   background-color: white;
   color: black;
   width: 90vw;
   margin: 0 auto;
-  min-height: 5000px;
+  min-height: 100vh;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding-top: 100px;
@@ -34,7 +33,8 @@
   z-index: 1;
 }
 
-/* Header text (optional) */
+
+/* Header text */
 .HeroText {
   color: white;
   font-size: 3rem;
@@ -81,39 +81,35 @@
   border-radius: 10px;
 }
 
-
 .event-name h2 {
-
-  margin-top:60px ;
-   background-color: red;
+  margin-top: 60px;
+  background-color: red;
   color: white;
   font-size: 2.2rem;
   padding: 10px 20px;
   border-radius: 8px;
-  width: fit-content; /* only as wide as the content */
+  width: fit-content;
 }
 
-.event-name{
+.event-name {
   display: flex;
   justify-content: center;
 }
 
 .event-details {
-  max-width: 600px; /* increase from 500px or less */
-  font-size: 2rem; /* increase font size */
+  max-width: 600px;
+  font-size: 2rem;
   padding: 20px;
- 
 }
 
-.event-description{
-      font-size: 1.5rem; 
+.event-description {
+  font-size: 1.5rem;
 }
-
 
 .event-button {
   margin-top: 180px;
   padding: 12px 28px;
-  background-color: #000;      /* or use #333, your primary color */
+  background-color: #000;
   color: white;
   font-size: 1.1rem;
   font-weight: 600;
