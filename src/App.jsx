@@ -1,6 +1,8 @@
 import Hero from './components/Hero'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import Contact from './components/Contact';
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 // import { AuthProvider } from "./context/AuthContext"
 import './index.css'
@@ -11,6 +13,7 @@ function App() {
         <Navbar />
         <Routes>
             <Route path="/" element={<Hero />} />
+            <Route path="/contact" element={<Contact />} />
             {/* Add more routes as needed */} 
         </Routes>
 
