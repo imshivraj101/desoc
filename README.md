@@ -43,20 +43,6 @@ You should see:
 - ✅ MongoDB connected successfully
 - 📧 Email transporter configured
 
-### 5. Create Admin Account
-\`\`\`bash
-curl -X POST http://localhost:5000/admin/create-default
-\`\`\`
-
-### 6. Start Frontend
-\`\`\`bash
-npm run dev
-\`\`\`
-
-## 🔐 **Admin Access:**
-- URL: http://localhost:3000/admin
-- Username: `admin`
-- Password: `admin123`
 
 ## 📧 **Email Setup (Gmail):**
 1. Enable 2-factor authentication
