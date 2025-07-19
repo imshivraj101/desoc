@@ -33,6 +33,7 @@ const Hero = () => {
             "Inspiring a future where technology and design harmoniously advance
             society through innovation and creativity."
           </h3>
+          
         </div>
 
           <div className="event-name">

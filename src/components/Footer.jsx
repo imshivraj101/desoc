@@ -7,6 +7,7 @@ const Footer = () => {
       <div className="footer-top">
         <h3>DESOC</h3>
         <p>Design + Engineering Society of Code</p>
+        
         <p>Empowering tech through creativity and code.</p>
       </div>
 
