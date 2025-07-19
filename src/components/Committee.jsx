@@ -1,5 +1,3 @@
-import './Committee.css';
-
 import React from 'react';
 import One from '../assets/1.png';
 import Two from '../assets/2.png';
@@ -16,27 +14,29 @@ import Twelve from '../assets/12.png';
 
 const CommitteeImages = () => {
   return (
-    <div className="committee-gallery">
-      <img src={One} alt="1" className="committee-image" />
-      <img src={Two} alt="2" className="committee-image" />
-      <img src={Three} alt="3" className="committee-image" />
-      <img src={Four} alt="4" className="committee-image" />
-      <img src={Five} alt="5" className="committee-image" />
-      <img src={Six} alt="6" className="committee-image" />
-      <img src={Seven} alt="7" className="committee-image" />
-      <img src={Eight} alt="8" className="committee-image" />
-      <img src={Nine} alt="9" className="committee-image" />
-      <img src={Ten} alt="10" className="committee-image" />
-      <img src={Eleven} alt="11" className="committee-image" />
-      <img src={Twelve} alt="12" className="committee-image" />
+    <div className="flex flex-col items-center mt-10">
+      <img src={One} alt="1" className="w-4/5" />
+      <img src={Two} alt="2" className="w-4/5" />
+      <img src={Three} alt="3" className="w-4/5" />
+      <img src={Four} alt="4" className="w-4/5" />
+      <img src={Five} alt="5" className="w-4/5" />
+      <img src={Six} alt="6" className="w-4/5" />
+      <img src={Seven} alt="7" className="w-4/5" />
+      <img src={Eight} alt="8" className="w-4/5" />
+      <img src={Nine} alt="9" className="w-4/5" />
+      <img src={Ten} alt="10" className="w-4/5" />
+      <img src={Eleven} alt="11" className="w-4/5" />
+      <img src={Twelve} alt="12" className="w-4/5" />
     </div>
   );
 };
 
 const Committee = () => {
   return (
-    <div className="committee">
-      <h2 className="heading">Committee of 2024-25</h2>
+    <div className="flex flex-col items-center">
+      <h2 className="bg-red-600 text-white text-[2.2rem] px-5 py-2.5 rounded-lg w-fit mt-10">
+        Committee of 2024-25
+      </h2>
       <CommitteeImages />
     </div>
   );
