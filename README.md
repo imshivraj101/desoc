@@ -1,12 +1,90 @@
-# React + Vite
+# DESOC Website - Fixed Issues ✅
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔧 **Issues Fixed:**
 
-Currently, two official plugins are available:
+1. **✅ Port Updated**: Changed from 4000 to 5000
+2. **✅ MongoDB Warnings**: Removed deprecated options
+3. **✅ Route Protection**: Admin dashboard now requires authentication
+4. **✅ Connection Status**: MongoDB connection status logging added
+5. **✅ Email Error Handling**: Better SMTP error handling
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 **Setup Instructions:**
 
-## Expanding the ESLint configuration
+### 1. Backend Setup
+\`\`\`bash
+cd server
+npm install express cors nodemailer mongoose bcryptjs jsonwebtoken dotenv
+\`\`\`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Environment Configuration
+Create `.env` file in server directory:
+\`\`\`env
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/desoc
+SMTP_USER=your-email@gmail.com
+SMTP_PASS=your-gmail-app-password
+TO_EMAIL=desoc.kkw@gmail.com
+JWT_SECRET=your-secret-key
+\`\`\`
+
+### 3. Start MongoDB
+\`\`\`bash
+# Make sure MongoDB is running
+mongod
+\`\`\`
+
+### 4. Start Backend Server
+\`\`\`bash
+cd server
+npm run dev
+\`\`\`
+You should see:
+- ✅ Server is running on http://localhost:5000
+- ✅ MongoDB connected successfully
+- 📧 Email transporter configured
+
+### 5. Create Admin Account
+\`\`\`bash
+curl -X POST http://localhost:5000/admin/create-default
+\`\`\`
+
+### 6. Start Frontend
+\`\`\`bash
+npm run dev
+\`\`\`
+
+## 🔐 **Admin Access:**
+- URL: http://localhost:3000/admin
+- Username: `admin`
+- Password: `admin123`
+
+## 📧 **Email Setup (Gmail):**
+1. Enable 2-factor authentication
+2. Generate App Password in Google Account settings
+3. Use App Password (not regular password) in SMTP_PASS
+
+## 🛡️ **Security Features:**
+- JWT token authentication
+- Route protection for admin dashboard
+- Token verification on page load
+- Automatic logout on invalid tokens
+
+## 🐛 **Troubleshooting:**
+
+### "Admin not found" Error:
+\`\`\`bash
+# Create the admin account first
+curl -X POST http://localhost:5000/admin/create-default
+\`\`\`
+
+### Email Authentication Error:
+- Use Gmail App Password, not regular password
+- Enable 2-factor authentication first
+- Check SMTP_USER and SMTP_PASS in .env
+
+### MongoDB Connection Issues:
+- Ensure MongoDB service is running
+- Check MONGODB_URI in .env file
+- Look for "✅ MongoDB connected successfully" in console
+
+The system now properly protects admin routes and provides clear feedback on all connection statuses!

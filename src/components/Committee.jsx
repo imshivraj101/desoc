@@ -14,7 +14,7 @@ import Twelve from '../assets/12.png';
 
 const CommitteeImages = () => {
   return (
-    <div className="flex flex-col items-center mt-10">
+    <div className="flex flex-col items-center mt-10" >
       <img src={One} alt="1" className="w-4/5" />
       <img src={Two} alt="2" className="w-4/5" />
       <img src={Three} alt="3" className="w-4/5" />
@@ -33,7 +33,7 @@ const CommitteeImages = () => {
 
 const Committee = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center" id='committee'>
       <h2 className="bg-red-600 text-white text-[2.2rem] px-5 py-2.5 rounded-lg w-fit mt-10">
         Committee of 2024-25
       </h2>

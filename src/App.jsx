@@ -1,29 +1,26 @@
-import Hero from './components/Hero'
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
-import Contact from './components/Contact';
+import Hero from "./components/Hero"
+import Footer from "./components/Footer"
+import Navbar from "./components/Navbar"
+import Contact from "./components/Contact"
+import Register from "./components/Register"
+import AdminLogin from "./components/admin/AdminLogin"
+import AdminDashboard from "./components/admin/AdminDashboard"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-// import { AuthProvider } from "./context/AuthContext"
-import './index.css'
+import "./index.css"
 
 function App() {
   return (
     <Router>
-        <Navbar />
-        <Routes>
-            <Route path="/" element={<Hero />} />
-            <Route path="/contact" element={<Contact />} />
-            {/* Add more routes as needed */} 
-        </Routes>
-
-        {/* </AuthProvider> */}
-        {/* 1-2 csd
-        1st round maths and array
-        2nd round arrays high
-        3rd round arrays and strings
-        5th week dp */}
-      <Footer/>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+      </Routes>
+      <Footer />
     </Router>
   )
 }

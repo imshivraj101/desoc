@@ -1,42 +1,44 @@
-import React, { useState } from 'react';
-import './Contact.css';
+"use client"
+
+import { useState } from "react"
+import "./Contact.css"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+    name: "",
+    email: "",
+    message: "",
+  })
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
+    setFormData({ ...formData, [e.target.id]: e.target.value })
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     try {
-      const res = await fetch("http://localhost:4000/contact", {
+      const res = await fetch("http://localhost:5000/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      });
+      })
 
-      const data = await res.json();
+      const data = await res.json()
 
       if (data.success) {
-        alert("✅ Message sent successfully!");
-        setFormData({ name: '', email: '', message: '' });
+        alert("✅ Message sent successfully!")
+        setFormData({ name: "", email: "", message: "" })
       } else {
-        alert("❌ Failed to send message.");
+        alert("❌ Failed to send message.")
       }
     } catch (err) {
-      console.error("Error:", err);
-      alert("⚠️ Server error. Please try again.");
+      console.error("Error:", err)
+      alert("⚠️ Server error. Please try again.")
     }
-  };
+  }
 
   return (
     <div className="contact-page">
@@ -44,7 +46,7 @@ const Contact = () => {
         <div className="contact-left">
           <h2>Contact Us</h2>
           <form className="contact-form" onSubmit={handleSubmit}>
-            <label htmlFor="name">Name</label> 
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               id="name"
@@ -80,12 +82,16 @@ const Contact = () => {
 
         <div className="contact-right">
           <h3>Info </h3>
-          <p><strong>📍 Location:</strong> K K Wagh Institute of Engineering Education & Research, Nashik</p>
-          <p><strong>📧 Email:</strong> sharyukekane@gmail.com</p>
+          <p>
+            <strong>📍 Location:</strong> K K Wagh Institute of Engineering Education & Research, Nashik
+          </p>
+          <p>
+            <strong>📧 Email:</strong> desoc.kkw@gmail.com
+          </p>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
