@@ -49,7 +49,7 @@ const AdminDashboard = () => {
 
   const verifyToken = async () => {
     try {
-      const res = await fetch("http://localhost:5000/admin/verify", {
+      const res = await fetch("https://desoc-main.onrender.com/admin/verify", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -79,11 +79,11 @@ const AdminDashboard = () => {
       }
 
       const [statsRes, announcementsRes, registrationsRes, eventsRes, contactsRes] = await Promise.all([
-        fetch("http://localhost:5000/admin/stats", { headers }),
-        fetch("http://localhost:5000/admin/announcements", { headers }),
-        fetch("http://localhost:5000/admin/registrations", { headers }),
-        fetch("http://localhost:5000/admin/events", { headers }),
-        fetch("http://localhost:5000/admin/contacts", { headers }),
+        fetch("https://desoc-main.onrender.com/admin/stats", { headers }),
+        fetch("https://desoc-main.onrender.com/admin/announcements", { headers }),
+        fetch("https://desoc-main.onrender.com/admin/registrations", { headers }),
+        fetch("https://desoc-main.onrender.com/admin/events", { headers }),
+        fetch("https://desoc-main.onrender.com/admin/contacts", { headers }),
       ])
 
       if (statsRes.ok) setStats(await statsRes.json())
@@ -108,7 +108,7 @@ const AdminDashboard = () => {
   const handleAnnouncementSubmit = async (e) => {
     e.preventDefault()
     try {
-      const res = await fetch("http://localhost:5000/admin/announcements", {
+      const res = await fetch("https://desoc-main.onrender.com/admin/announcements", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -140,7 +140,7 @@ const AdminDashboard = () => {
         prizes: newEvent.prizes.filter(prize => prize.trim() !== ""),
       }
 
-      const res = await fetch("http://localhost:5000/admin/events", {
+      const res = await fetch("https://desoc-main.onrender.com/admin/events", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -179,7 +179,7 @@ const AdminDashboard = () => {
 
   const updateRegistrationStatus = async (id, status) => {
     try {
-      const res = await fetch(`http://localhost:5000/admin/registrations/${id}`, {
+      const res = await fetch(`https://desoc-main.onrender.com/admin/registrations/${id}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -202,7 +202,7 @@ const AdminDashboard = () => {
   const deleteAnnouncement = async (id) => {
     if (window.confirm("Are you sure you want to delete this announcement?")) {
       try {
-        const res = await fetch(`http://localhost:5000/admin/announcements/${id}`, {
+        const res = await fetch(`https://desoc-main.onrender.com/admin/announcements/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -221,7 +221,7 @@ const AdminDashboard = () => {
   const deleteEvent = async (id) => {
     if (window.confirm("Are you sure you want to delete this event?")) {
       try {
-        const res = await fetch(`http://localhost:5000/admin/events/${id}`, {
+        const res = await fetch(`https://desoc-main.onrender.com/admin/events/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -239,7 +239,7 @@ const AdminDashboard = () => {
 
   const sendCustomEmail = async () => {
     try {
-      const res = await fetch("http://localhost:5000/admin/send-email", {
+      const res = await fetch("https://desoc-main.onrender.com/admin/send-email", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -1058,7 +1058,7 @@ const AdminDashboard = () => {
                         <select
                           value={contact.status}
                           onChange={(e) => {
-                            fetch(`http://localhost:5000/admin/contacts/${contact._id}`, {
+                            fetch(`https://desoc-main.onrender.com/admin/contacts/${contact._id}`, {
                               method: "PUT",
                               headers: {
                                 Authorization: `Bearer ${token}`,

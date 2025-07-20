@@ -27,7 +27,7 @@ const Register = () => {
 
   const fetchEvents = async () => {
     try {
-      const res = await fetch("http://localhost:5000/events")
+      const res = await fetch("https://desoc-main.onrender.com/events")
       if (res.ok) {
         const data = await res.json()
         setEvents(data)
@@ -91,7 +91,7 @@ const Register = () => {
     setIsSubmitting(true)
 
     try {
-      const res = await fetch("http://localhost:5000/register", {
+      const res = await fetch("https://desoc-main.onrender.com/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

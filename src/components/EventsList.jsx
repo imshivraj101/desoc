@@ -14,7 +14,7 @@ const EventsList = () => {
 
   const fetchEvents = async () => {
     try {
-      const res = await fetch("http://localhost:5000/events")
+      const res = await fetch("https://desoc-main.onrender.com/events")
       if (res.ok) {
         const data = await res.json()
         setEvents(data)

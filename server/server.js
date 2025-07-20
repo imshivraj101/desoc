@@ -10,7 +10,14 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 // Middleware
-app.use(cors())
+const corsOptions = {
+  origin: process.env.FRONTEND_URL, // Allow any origin if not specified
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+  optionsSuccessStatus: 204,
+}
+// app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.json())
 
 // MongoDB Connection with proper error handling

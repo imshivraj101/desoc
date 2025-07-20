@@ -16,7 +16,7 @@ const AdminLogin = () => {
     const token = localStorage.getItem("adminToken")
     if (token) {
       // Verify token is still valid
-      fetch("http://localhost:5000/admin/verify", {
+      fetch("https://desoc-main.onrender.com/admin/verify", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -46,7 +46,7 @@ const AdminLogin = () => {
     setIsLoading(true)
 
     try {
-      const res = await fetch("http://localhost:5000/admin/login", {
+      const res = await fetch("https://desoc-main.onrender.com/admin/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -124,14 +124,7 @@ const AdminLogin = () => {
             </div>
           </form>
 
-          <div className="mt-4 text-center space-y-2">
-            <p className="text-xs text-gray-500">Default credentials: admin / admin123</p>
-            <p className="text-xs text-red-500">
-              Note: Create admin account first by running:
-              <br />
-              <code className="bg-gray-100 px-1 rounded">curl -X POST http://localhost:5000/admin/create-default</code>
-            </p>
-          </div>
+          
         </div>
       </div>
     </div>
