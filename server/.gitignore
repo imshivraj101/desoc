@@ -12,8 +12,8 @@ dist
 dist-ssr
 *.local
 
-server/env
-server/.env
+server*/env
+./server/.env
 .env
 # Ignore environment files
 # Editor directories and files

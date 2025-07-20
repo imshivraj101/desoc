@@ -106,21 +106,13 @@ const Contact = mongoose.model("Contact", contactSchema)
 const Admin = mongoose.model("Admin", adminSchema)
 
 // Nodemailer setup with better error handling
-let transporter
-try {
-  transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  })
-  console.log("📧 Email transporter configured")
-} catch (error) {
-  console.error("❌ Email configuration error:", error.message)
-}
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+})
 
 // Auth middleware
 const authenticateAdmin = async (req, res, next) => {
